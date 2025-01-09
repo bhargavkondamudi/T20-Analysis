@@ -18,7 +18,7 @@ DB_PASSWORD = st.secrets["DB_PASSWORD"]
 driver = st.secrets["driver"]
 user_table = st.secrets["user_table"]
 Feedback_table = st.secrets["Feedback_table"]
-user_session = st.secrets["user_session"]
+user_session = st.secrets["user_logs"]
 
 # Database connection string
 conn_str = (
