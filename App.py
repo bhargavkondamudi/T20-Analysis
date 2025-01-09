@@ -11,14 +11,14 @@ st.session_state.setdefault("username", None)
 st.session_state.setdefault("show_signup", False)  # Track whether to show signup page
 
 # Load environment variables from Streamlit Secrets
-DB_SERVER = st.secrets["DB_SERVER"]
-DB_DATABASE = st.secrets["DB_DATABASE"]
-DB_USERNAME = st.secrets["DB_USERNAME"]
-DB_PASSWORD = st.secrets["DB_PASSWORD"]
-driver = st.secrets["driver"]
-user_table = st.secrets["user_table"]
-Feedback_table = st.secrets["Feedback_table"]
-user_session = st.secrets["user_logs"]
+DB_SERVER = st.secrets["connection"]["DB_SERVER"]
+DB_DATABASE = st.secrets["connection"]["DB_DATABASE"]
+DB_USERNAME = st.secrets["connection"]["DB_USERNAME"]
+DB_PASSWORD = st.secrets["connection"]["DB_PASSWORD"]
+driver = st.secrets["connection"]["driver"]
+user_table = st.secrets["connection"]["user_table"]
+Feedback_table = st.secrets["connection"]["Feedback_table"]
+user_session = st.secrets["connection"]["user_logs"]
 
 # Database connection string
 conn_str = (
